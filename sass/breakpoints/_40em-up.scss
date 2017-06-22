@@ -1,0 +1,496 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+/*********************
+HEADER STYLES
+*********************/
+
+
+
+.social{
+	float: left;
+	margin-left: 20px;
+	padding: .25em 0;
+}
+
+.social-icon{
+	float: left;
+	background-repeat: no-repeat;
+}
+
+
+
+.site-branding{
+	float: left;
+    width: initial;
+    margin: 0 0 0 2em;
+
+    .site-title{
+        margin: 0 auto;
+        text-align: center;
+
+        a{
+            font-size: 150%;
+            text-decoration: none
+        }
+    }
+}
+
+
+
+.client-search{
+	display: inherit;
+	float: right;
+	margin: 8px 20px 0 0;
+
+	#client{
+		float: left;
+    	border-radius: 25px;
+
+		a{
+			line-height: 28px;
+			font-size: 1em;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	#search{
+		float: left;
+		margin-right: 10px;
+	}
+
+}
+
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+button.menu-toggle {
+	display: none;
+}
+
+.menu-primary-menu-container{
+	
+}
+
+.main-navigation {
+	float:right;
+	clear: none;
+	margin-right: 20px;
+	padding: .25em 0;
+
+
+	ul {
+		text-align: center;
+		list-style: none;
+		margin: 0;
+		width: inherit;
+		position: inherit;
+		z-index: inherit;
+		background-color:inherit;
+		height:inherit;
+		transition: inherit;
+		display: inherit;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+		width:inherit;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: inline-block;
+		text-decoration: none;
+		text-align:center;
+		padding: .25em 1em;
+    	border-top:inherit;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+}
+
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+/*********************
+WIDGET STYLES
+*********************/
+
+.widget-contain {
+	width:14em;
+
+	ul{
+		list-style: none;
+		margin:0;
+		padding: 0;
+		text-align: left; 
+
+
+		li{
+			margin: 0;
+			padding:0;
+		}
+	}
+
+}
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer{
+	margin: 0 auto;
+    display: table;
+    text-align: center;
+	
+	ul.footer-widget-area{
+		margin:0;
+		padding:0;
+		display: flex;
+    	justify-content: center;
+		
+		li.footer-widget{
+			width:24%;
+			text-align: left;
+			margin: 0 1%;
+
+			h2{
+				color:#ddd;
+				border-bottom:1px solid #ddd;
+			}
+			
+		}
+	}
+
+	#inner-footer{
+		padding-left: 2%;
+		padding-right: 2%;
+		background-color: #444;
+		position: relative;
+		z-index: 2;
+	}
+
+	.copyright{
+		font-size: 13px;
+		float: left;
+	}
+
+	.site-credit{
+		font-size: 13px;
+		float: right;
+	}
+
+}
+
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+
+
+/*********************
+HOME STYLES
+*********************/ 
+
+
+
+/*********************
+SERVICES
+*********************/
+
+.service-cta-mobile{
+	display: none;
+}
+
+
+/*********************
+ARCHIVE STYLES
+*********************/
+
+
+.archive-excerpt{
+	position: relative;
+}
+
+
+
+.service-thumb{
+	float: left;
+	width: 40%;
+	margin: 0 1em .5em 0;
+	margin-bottom: 0;
+	display: block;
+
+	img{
+		margin-bottom: 0;
+	}
+
+}
+
+.service-footer-thumb img:hover{
+	filter: brightness(110%);
+}
+
+
+
+.post-thumb, .service-thumb, .gallery-item{
+	position: relative;
+	line-height: 0;
+}
+
+.post-thumb img{
+	margin-bottom: 0;
+	display: block;
+}
+
+.entry-content dd{
+	margin: 0;
+}
+
+.entry-content img.size-full, .entry-content img.size-large{
+	margin-bottom: 0;
+	display: block;
+}
+
+.entry-content .size-large{
+	margin: 0;
+}
+
+.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption, figcaption {
+	font-size: 80%;
+	width: 100%;
+	line-height: 1.1em;
+	color:#fff;
+	position: absolute;
+	bottom: 0;
+	padding: .25em .75em;
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+p.gallery-item-text{
+	font-size: 100%;
+}
+
+
+.post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
+		opacity: 1;
+		display: inherit;
+
+		a{
+			color: #fff;
+		}
+		a:hover{
+			color: #000;
+		}
+
+}

@@ -23,3 +23,33 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 @import "galleries";
+
+
+
+
+
+#hero-home{
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  height: 100vh;
+}
+
+
+#hero-identity{
+  width:100%;
+  position: absolute;
+  bottom:2em;
+
+  .hero-title{
+      text-align: center;
+      display: block;
+      text-shadow: 0px 0px 15px #000;
+  }
+
+}
+
+
+.img-circle{
+	border-radius: 100%;
+}

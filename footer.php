@@ -13,20 +13,33 @@
 
 	</div><!-- #content -->
 
+	<?php get_template_part( 'footer-meta' ); ?>
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'keramas' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'keramas' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'keramas' ), 'keramas', '<a href="https://automattic.com/">William Bay</a>' );
-			?>
+
+			<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.
+				<?php if ( ! is_admin() ) : ?>
+				<a href="/privacy-policy" class="privacy">Privacy Policy</a>
+				<?php endif; ?>
+			</p>
+  			
+			<p class="site-credit">
+				<?php 
+
+					if ( is_front_page() ){
+
+						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/">Flaunt Sites</a>' ); 
+				}else{
+						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/" rel="nofollow">Flaunt Sites</a>' );
+
+				}?>
+			</p>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 

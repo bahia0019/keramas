@@ -132,6 +132,17 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
+
+/**
+ * Recommend the Kirki plugin
+ */
+require get_template_directory() . '/inc/include-kirki.php';
+
+/**
+ * Load the Kirki Fallback class
+ */
+require get_template_directory() . '/inc/kirki-fallback.php';
+
 /**
  * Customizer additions.
  */
@@ -141,3 +152,57 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Include the Widget locations
+ */
+require get_template_directory() . '/inc/widgets.php';
+
+
+
+
+function fsc_figure( $image, $size, $imageclass, $captionclass ){
+
+	/**
+	* Let plugins pre-filter the image meta to be able to fix inconsistencies in the stored data.
+	*
+	* @param string 	$image    		The ACF field name (i.e. 'your_photo_name').
+	* @param string  	$size    		Thumbnail size (i.e. 'Thumbnail', 'Medium', 'Large')
+	* @param string 	$imageclass     The Figure class you want to use (ex: 'my-figure') 
+	* @param string    	$captionclass 	The Figcaption class you want to use (ex: 'caption-blue') 
+	*/
+
+		$image = get_field( $image );
+		$size = $size;
+		$thumb = $image['sizes'][ $size ];
+
+		if( !empty($image) ):  ?>
+
+			<figure class="<?php echo $imageclass; ?>">
+			
+					<?php echo wp_get_attachment_image( $image['ID'], $size, false, array( 'alt' => $image['alt'] ) );  ?>
+
+					<figcaption class="<?php echo $captionclass; ?>">
+
+						<?php echo $image[ 'caption' ]; ?>
+
+					</figcaption>
+
+			</figure>
+
+			<script type="application/ld+json">
+				{
+				"@context": "http://schema.org",
+				"@type": "ImageObject",
+				"author": "<?php the_author(); ?>",
+				"contentUrl": "<?php echo $thumb; ?>",
+				"datePublished": "<?php echo $image[ 'created_timestamp' ]; ?>",
+				"description": "<?php echo $image[ 'alt' ]; ?>",
+				"name": "<?php echo $image[ 'title' ]; ?>",
+				"copyright": "<?php echo $image[ 'copyright' ]; ?>"
+				}
+			</script>
+
+		<?php endif; 
+}
