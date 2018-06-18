@@ -26,12 +26,11 @@ object {
 
 
 
+.jumbotron{
+  position: relative;
+}
 
-
-#hero-home{
-  background-size: cover;
-  background-position-x: 50%;
-  background-position-y: 50%;
+.jumbotron-image{
   height: 100vh;
 }
 
@@ -52,4 +51,6 @@ object {
 
 .img-circle{
 	border-radius: 100%;
+  width: 5em;
+  margin-right: 1em;
 }

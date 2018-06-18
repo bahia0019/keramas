@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
@@ -87,18 +88,18 @@ BASE (MOBILE) SIZE
 /*--------------------
 TABLET & SMALLER LAPTOPS
 --------------------*/
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 768px) {
 
-	@import "breakpoints/40em-up";
+	@import "breakpoints/768px-up";
 
 } // end of media query
 
 /*--------------------
 DESKTOP
 --------------------*/
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 1024px) {
 
-	@import "breakpoints/64em-up"; 
+	@import "breakpoints/1024px-up"; 
 
 } // end of media query
 
@@ -106,9 +107,9 @@ DESKTOP
 LARGE VIEWING SIZE
 --------------------*/
 
-@media only screen and (min-width: 90.063em) {
+@media only screen and (min-width: 1440px) {
 
-	@import "breakpoints/90em-up";
+	@import "breakpoints/1440px-up";
 
 } // end of media query
 

@@ -18,6 +18,8 @@
 
 <?php wp_head(); ?>
 <?php get_template_part( 'inc/customizer-styles' ); ?>
+<?php require_once 'wp-content/plugins/flaunt-sites-core/public/partials/icons.svg'; ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -26,39 +28,45 @@
 	
 	<header id="masthead" class="site-header" role="banner">
 	
-			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
-
-				<div class="social">
-					<?php fsc_social_icons( 'facebook' ); ?>
-					<?php fsc_social_icons( 'twitter' ); ?>
-					<?php fsc_social_icons( 'instagram' ); ?>
-					<?php fsc_social_icons( 'pinterest' ); ?>
-					<?php fsc_social_icons( 'google-plus' ); ?>
-
-				</div>
-			<?php endif; ?>
-
-
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-			?>
+				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'keramas' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		<div class="meta-header" >
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'keramas' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+
+			</nav><!-- #site-navigation -->
+
+			<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
+
+				<a class="social-icon" target="_blank" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">
+					<svg class="fs-icons">
+						<use xlink:href="#icon-clients-square"></use>
+					</svg>
+				</a>
+
+			<?php endif; ?>
+			
+			<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>
+				<a class="social-icon" href="#">
+					<svg class="fs-icons">
+						<use xlink:href="#icon-search"></use>
+					</svg>
+				</a>
+			<?php endif; ?>
+			
+		</div>
+
+
+
 	</header><!-- #masthead -->
 	
 	<div id="trigger2" class="spacer s0"></div>

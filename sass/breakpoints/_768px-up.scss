@@ -21,68 +21,73 @@ GENERAL STYLES
 LAYOUT & GRID STYLES
 *********************/
 
+.content-area {
+	width: 90%;
+	margin: 2em auto;
+}
+
+
+
 /*********************
 HEADER STYLES
 *********************/
 
+.site-header{
+	display: flex;
+	justify-content: space-between;
+	width:100%;
+	padding: 0 2.5%; 
 
+	.social{
+		padding: .25em 0;
+	}
 
-.social{
-	float: left;
-	margin-left: 20px;
-	padding: .25em 0;
-}
+	.social-icon{
+		background-repeat: no-repeat;
+	}
 
-.social-icon{
-	float: left;
-	background-repeat: no-repeat;
-}
+	.site-branding{
 
+		.site-title{
 
-
-.site-branding{
-	float: left;
-    width: initial;
-    margin: 0 0 0 2em;
-
-    .site-title{
-        margin: 0 auto;
-        text-align: center;
-
-        a{
-            font-size: 150%;
-            text-decoration: none
-        }
-    }
-}
-
-
-
-.client-search{
-	display: inherit;
-	float: right;
-	margin: 8px 20px 0 0;
-
-	#client{
-		float: left;
-    	border-radius: 25px;
-
-		a{
-			line-height: 28px;
-			font-size: 1em;
-			color: #fff;
-			text-decoration: none;
+			a{
+				font-size: 150%;
+				text-decoration: none
+			}
 		}
 	}
 
-	#search{
-		float: left;
-		margin-right: 10px;
+	.meta-header{
+		display: flex;
+		align-items: center;
+
+		.fs-icons{
+			margin:0 .5em;
+		}
+	}
+
+	.client-search{
+		display: inherit;
+		margin: 8px 20px 0 0;
+
+		#client{
+			border-radius: 25px;
+
+			a{
+				line-height: 28px;
+				font-size: 1em;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+
+		#search{
+			margin-right: 10px;
+		}
+
 	}
 
 }
-
-
 
 /*********************
 NAVIGATION STYLES
@@ -97,23 +102,11 @@ button.menu-toggle {
 }
 
 .main-navigation {
-	float:right;
-	clear: none;
-	margin-right: 20px;
-	padding: .25em 0;
+
 
 
 	ul {
-		text-align: center;
-		list-style: none;
-		margin: 0;
-		width: inherit;
-		position: inherit;
-		z-index: inherit;
-		background-color:inherit;
-		height:inherit;
-		transition: inherit;
-		display: inherit;
+		display: flex;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -167,7 +160,7 @@ button.menu-toggle {
 		display: inline-block;
 		text-decoration: none;
 		text-align:center;
-		padding: .25em 1em;
+		padding: .25em .5em;
     	border-top:inherit;
 	}
 
@@ -398,6 +391,45 @@ FOOTER STYLES
 /*********************
 HOME STYLES
 *********************/ 
+
+.reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+	.review{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr auto;
+	}
+
+	img.thumb-small.wp-post-image {
+		width: 75px;
+		justify-self: center;
+		border-radius: 100%;
+	}
+
+	.quote{
+		margin:0; 
+	}
+
+}
+
+/*********************
+ABOUT SECTION STYLES
+*********************/
+
+
+#about-container {
+	display:flex;
+		
+	.about-photo{
+		width:50%;
+	}
+	.about-us-text{
+		width:50%;
+	}
+}
 
 
 

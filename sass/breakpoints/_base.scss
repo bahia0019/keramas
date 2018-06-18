@@ -11,6 +11,12 @@ and will be used across all viewports.
 
 ******************************************************************/
 
+.content-area {
+	width: 90%;
+	margin: 2em auto;
+}
+
+
 .logo{
 	width: 300px;
 	margin: 20px auto 0;
@@ -18,28 +24,33 @@ and will be used across all viewports.
 	background-repeat: no-repeat;
 }
 
-
 /*********************
 HEADER STYLES
 *********************/
-.meta-header{
+
+.site-header{
+    background: rgba( 0, 0, 0, .8 );
+    width: 100%;
+	z-index: 100;
+	position: absolute;
+
+	.meta-header{
 		display: none;
 
-	.social-header{
-	}
+		.social-header{
+		}
 
-	.client-search{
+		.client-search{
 
-	}
-}	
+		}
+	}	
+
+}
+
 
 .site-branding{
-    width:100%;
-    margin: 2em 0;
 
     .site-title{
-        margin: 0 auto;
-        text-align: center;
 
         a{
             font-size: 200%;
@@ -202,6 +213,77 @@ FOOTER STYLES
 
 
 
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+	background-color: $color__background-accent; 
+
+    p{
+        color:$color__text-reverse;
+        margin: 1em;
+        font-size: 80%;
+    }
+
+    .copyright{
+        float: left;
+        margin-left: 1em;
+    }
+
+
+    .site-credit{
+        float: right;
+        margin-right: 1em;
+    }
+
+}
+
+
+
+
+/*********************
+HOME STYLES
+*********************/ 
+
+
+.reviews{
+    width:100%;
+
+	.review{
+		display: flex;;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	img.thumb-small.wp-post-image {
+		border-radius: 100%;
+	}
+
+	.quote{
+		margin:0; 
+	}
+
+
+}
+
+/*********************
+ABOUT SECTION STYLES
+*********************/
+
+
+#about-container{
+		
+	.about-photo{
+		width:100%;
+	}
+	.about-us-text{
+		width:100%;
+	}
+}
+
+
+
+
+
 /*********************
 SERVICES STYLES
 *********************/
@@ -324,7 +406,6 @@ REVIEWS STYLES
 *********************/
 
 .reviews{
-	float: left;
 }
 
 .quote-l, .quote-r{
@@ -347,7 +428,7 @@ REVIEWS STYLES
 	margin: 0;
 	opacity: .6;
 	text-align: right;
-	width: 100%;
+	grid-column: 1/4;
 }
 
 
