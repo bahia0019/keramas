@@ -23,7 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
+# Normalize 
 # Typography
 # Elements
 # Forms
@@ -89,18 +89,14 @@ BASE (MOBILE) SIZE
 TABLET & SMALLER LAPTOPS
 --------------------*/
 @media screen and (min-width: 768px) {
-
-	@import "breakpoints/768px-up";
-
+  @import "breakpoints/768px-up";
 } // end of media query
 
 /*--------------------
 DESKTOP
 --------------------*/
 @media screen and (min-width: 1024px) {
-
-	@import "breakpoints/1024px-up"; 
-
+  @import "breakpoints/1024px-up";
 } // end of media query
 
 /*--------------------
@@ -108,20 +104,16 @@ LARGE VIEWING SIZE
 --------------------*/
 
 @media only screen and (min-width: 1440px) {
-
-	@import "breakpoints/1440px-up";
-
+  @import "breakpoints/1440px-up";
 } // end of media query
 
 /*--------------------
 RETINA (2x RESOLUTION DEVICES)
 --------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-
-	@import "breakpoints/2x";
-
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  @import "breakpoints/2x";
 } // end of media query
 
 /*--------------------------------------------------------------
@@ -133,11 +125,6 @@ RETINA (2x RESOLUTION DEVICES)
 # Alignments
 --------------------------------------------------------------*/
 @import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
 
 /*--------------------------------------------------------------
 # Widgets
@@ -152,4 +139,4 @@ RETINA (2x RESOLUTION DEVICES)
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-@import "media/media"; 
+@import "media/media";

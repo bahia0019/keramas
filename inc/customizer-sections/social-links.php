@@ -60,17 +60,5 @@ keramas_Kirki::add_section( 'social-links', array(
         'section'     => 'social-links',
         'default'     => '',
         'priority'    => 10,
-    ) );
-
-
-    keramas_Kirki::add_field( 'keramas', array(
-        'type'        => 'text',
-        'settings'    => 'fsc_google-plus_url',
-        'option_type' => 'option',
-        'option_name' => 'fsc_options',
-        'label'       => __( 'Google+ URL', 'keramas' ),
-        'description' => __( 'Include the http:// or https://', 'keramas' ),
-        'section'     => 'social-links',
-        'default'     => '',
-        'priority'    => 10,
-    ) );
+	) );
+	
