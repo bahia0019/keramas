@@ -3,12 +3,11 @@ Theme Name: Keramas
 GitHub Theme URI: https://github.com/FlauntSites/keramas
 Author: Flaunt Sites
 Author URI: https://flauntsites.com
-Description: Description
-Version: 0.1.0 
+Description: Our theme Keramas takes after its namesake surfbreak, a spot hiding behind a rice paddy on the Eastern coast of Bali. The theme and wave share Power and Performance in common.
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: keramas
-Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -24,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize 
+# Block Fixes
 # Typography
 # Elements
 # Forms
@@ -50,6 +50,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "block-fixes";
 
 /*--------------------------------------------------------------
 # Typography
@@ -89,14 +94,14 @@ BASE (MOBILE) SIZE
 TABLET & SMALLER LAPTOPS
 --------------------*/
 @media screen and (min-width: 768px) {
-  @import "breakpoints/768px-up";
+    @import "breakpoints/768px-up";
 } // end of media query
 
 /*--------------------
 DESKTOP
 --------------------*/
 @media screen and (min-width: 1024px) {
-  @import "breakpoints/1024px-up";
+    @import "breakpoints/1024px-up";
 } // end of media query
 
 /*--------------------
@@ -104,16 +109,16 @@ LARGE VIEWING SIZE
 --------------------*/
 
 @media only screen and (min-width: 1440px) {
-  @import "breakpoints/1440px-up";
+    @import "breakpoints/1440px-up";
 } // end of media query
 
 /*--------------------
 RETINA (2x RESOLUTION DEVICES)
 --------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min--moz-device-pixel-ratio: 1.5),
-  only screen and (min-device-pixel-ratio: 1.5) {
-  @import "breakpoints/2x";
+    only screen and (min--moz-device-pixel-ratio: 1.5),
+    only screen and (min-device-pixel-ratio: 1.5) {
+    @import "breakpoints/2x";
 } // end of media query
 
 /*--------------------------------------------------------------
@@ -125,11 +130,6 @@ RETINA (2x RESOLUTION DEVICES)
 # Alignments
 --------------------------------------------------------------*/
 @import "modules/alignments";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Infinite scroll

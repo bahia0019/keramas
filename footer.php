@@ -10,38 +10,45 @@
  */
 
 ?>
+	<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
+	<?php get_template_part( 'template-parts/testimonials' ); ?>
 
 	</div><!-- #content -->
 
 	<?php get_template_part( 'footer-meta' ); ?>
-	
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+
+		<footer class="site-info">
 
 			<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.
 				<?php if ( ! is_admin() ) : ?>
 				<a href="/privacy-policy" class="privacy">Privacy Policy</a>
 				<?php endif; ?>
 			</p>
-  			
+
 			<p class="site-credit">
-				<?php 
-
-					if ( is_front_page() ){
-
-						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/">Flaunt Sites</a>' ); 
-				}else{
-						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/" rel="nofollow">Flaunt Sites</a>' );
-
-				}?>
+				<?php
+					printf( esc_html__( 'Website Proudly Provided by: %s.', 'keramas' ), '<a href="https://flauntsites.com.com/" rel="nofollow">Flaunt Sites</a>' );
+				?>
 			</p>
 
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		</footer><!-- .site-info -->
+
+		<?php require get_template_directory() . '/images/arrow.svg'; ?>
+		<script>
+			document.querySelector( '.scroll-to-top' ).addEventListener("click", function () {
+				window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		})
+		</script>
+
 </div><!-- #page -->
 
 
 <?php wp_footer(); ?>
-
+<script>
+	<?php echo get_theme_mod( 'custom_js', '' ); ?>
+</script>
 </body>
 </html>

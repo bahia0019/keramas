@@ -14,44 +14,9 @@
 
 get_header(); ?>
 
-
-
-<div class="jumbotron" id="hero-home">
-
-	<div class="container" id="hero-identity">
-
-		<a href="<?php echo home_url(); ?>" rel="nofollow">
-
-		<?php
-
-			$image    = get_option( 'fsc_options', '' );
-			$image    = $image['fsc_logo'];
-			$id       = $image;
-			$logo_alt = get_bloginfo( 'name' );
-
-		if ( isset( $image ) ) {
-
-				echo wp_get_attachment_image( $id, 'medium', false, array( 'class' => 'logo', 'alt' => $logo_alt ) );	
-
-		} else {
-			?>
-
-				<span class="site-name"><?php bloginfo( 'name' ); ?></span>
-
-			<?php } ?>
-
-		</a>
-
-	</div>
-
-	<div class="jumbotron-image"></div>
-
-</div>
-
 <div id="primary" class="content-area">
 
 	<main id="main" class="site-main" role="main">
-				
 		<?php
 			while ( have_posts() ) : the_post();
 
@@ -62,6 +27,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
+<?php fsc_business_info(); ?>
 
 
 
