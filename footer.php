@@ -19,7 +19,7 @@
 
 		<footer class="site-info">
 
-			<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.
+			<p class="copyright">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>.
 				<?php if ( ! is_admin() ) : ?>
 				<a href="/privacy-policy" class="privacy">Privacy Policy</a>
 				<?php endif; ?>
