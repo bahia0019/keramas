@@ -27,7 +27,7 @@
 
 			<p class="site-credit">
 				<?php
-					printf( esc_html__( 'Website Proudly Provided by: %s.', 'keramas' ), '<a href="https://flauntsites.com.com/" rel="nofollow">Flaunt Sites</a>' );
+					printf( esc_html__( 'Website Proudly Provided by: %s.', 'keramas' ), '<a href="https://flauntsites.com" rel="nofollow">Flaunt Sites</a>' );
 				?>
 			</p>
 
